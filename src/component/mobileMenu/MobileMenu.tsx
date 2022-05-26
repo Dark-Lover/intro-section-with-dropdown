@@ -7,43 +7,52 @@ import calendar from "../../assets/icon-calendar.svg";
 import reminder from "../../assets/icon-reminders.svg";
 import planning from "../../assets/icon-planning.svg";
 import ListItem from "../subComp/ListItem";
+import CustomMenuItem, { useOpenState } from "../CustomMenuItem";
 
+const initialOpeningState = {
+  features: false,
+  company: false,
+};
 const MobileMenu = () => {
-  const [isDropOpen, setIsDropOpen] = useState<boolean>(false);
-  const [isDropOpenTwo, setIsDropTwoOpen] = useState<boolean>(false);
+  const { isOpen, handleOpen } = useOpenState(initialOpeningState);
 
   return (
     <nav className={styles.mobile_menu}>
       <ul>
-        <ListItem
-          text="Features"
-          imgSrc={isDropOpen ? u_arrow : d_arrow}
-          isDropOpen={isDropOpen}
-          handleOpenDrop={setIsDropOpen}
-        >
-          <div className={styles.dropdown}>
-            <ul>
-              <ListItem text="Todo List" imgSrc={todo} isDrop />
-              <ListItem text="Calendar" imgSrc={calendar} isDrop />
-              <ListItem text="Reminders" imgSrc={reminder} isDrop />
-              <ListItem text="Planning" imgSrc={planning} isDrop />
-            </ul>
-          </div>
-        </ListItem>
-        <ListItem
-          text="Company"
-          imgSrc={isDropOpenTwo ? u_arrow : d_arrow}
-          isDropOpen={isDropOpenTwo}
-          handleOpenDrop={setIsDropTwoOpen}
-        >
-          <div className={styles.dropdown}>
-            <ul>
-              <ListItem text="History" />
-              <ListItem text="Our Team" />
-              <ListItem text="Blog" />
-            </ul>
-          </div>
-        </ListItem>
+        <CustomMenuItem>
+          <ListItem
+            text="Features"
+            imgSrc={isOpen.features ? u_arrow : d_arrow}
+            isDropOpen={isOpen.features}
+            handleOpenDrop={() => handleOpen("features")}
+          >
+            <div className={styles.dropdown}>
+              <ul>
+                <ListItem text="Todo List" imgSrc={todo} isDrop />
+                <ListItem text="Calendar" imgSrc={calendar} isDrop />
+                <ListItem text="Reminders" imgSrc={reminder} isDrop />
+                <ListItem text="Planning" imgSrc={planning} isDrop />
+              </ul>
+            </div>
+          </ListItem>
+        </CustomMenuItem>
+        <CustomMenuItem>
+          <ListItem
+            text="Company"
+            imgSrc={isOpen.company ? u_arrow : d_arrow}
+            isDropOpen={isOpen.company}
+            handleOpenDrop={() => handleOpen("company")}
+          >
+            <div className={styles.dropdown}>
+              <ul>
+                <ListItem text="History" />
+                <ListItem text="Our Team" />
+                <ListItem text="Blog" />
+              </ul>
+            </div>
+          </ListItem>
+        </CustomMenuItem>
+
         <ListItem text="Careers" />
         <ListItem text="About" />
 

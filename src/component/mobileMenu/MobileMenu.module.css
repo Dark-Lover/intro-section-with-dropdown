@@ -63,3 +63,41 @@
 .mobile_menu ul li .dropdown ul li {
   padding: 0.5rem 0 0.5rem 0.8rem;
 }
+
+@media screen and (min-width: 650px) {
+  .mobile_menu {
+    width: 100%;
+    position: relative;
+    /* background-color: green; */
+    padding: 0;
+    min-width: 500px;
+  }
+  .mobile_menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .mobile_menu ul li {
+    width: 200px;
+    position: relative;
+    flex-direction: row;
+    /* background-color: blueviolet; */
+    padding: 0;
+  }
+
+  .mobile_menu ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile_menu .auth {
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .mobile_menu .auth .login,
+  .mobile_menu .auth .register {
+    padding: 0.5rem 1rem;
+  }
+}

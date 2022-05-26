@@ -22,10 +22,17 @@ const Header = ({
       </div>
 
       {menuToggle && (
+        <div className={styles.mobile_menu_container}>
+          <div className={styles.mobile_menu_wrapper}>
+            <MobileMenu />
+          </div>
+        </div>
+      )}
+      <div className={styles.desktop_menu}>
         <div className={styles.mobile_menu_wrapper}>
           <MobileMenu />
         </div>
-      )}
+      </div>
     </header>
   );
 };
