@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./MobileMenu.module.css";
+import styles from "./DeskMenu.module.css";
 import d_arrow from "../../assets/icon-arrow-down.svg";
 import u_arrow from "../../assets/icon-arrow-up.svg";
 import todo from "../../assets/icon-todo.svg";
@@ -13,11 +13,11 @@ const initialOpeningState = {
   features: false,
   company: false,
 };
-const MobileMenu = () => {
+const DeskMenu = () => {
   const { isOpen, handleOpen } = useOpenState(initialOpeningState);
 
   return (
-    <nav className={styles.mobile_menu}>
+    <nav className={styles.desk_menu}>
       <ul>
         <CustomMenuItem>
           <ListItem
@@ -55,14 +55,13 @@ const MobileMenu = () => {
 
         <ListItem text="Careers" />
         <ListItem text="About" />
-
-        <div className={styles.auth}>
-          <button className={styles.login}> Login</button>
-          <button className={styles.register}> Register</button>
-        </div>
       </ul>
+      <div className={styles.auth}>
+        <button className={styles.login}> Login</button>
+        <button className={styles.register}> Register</button>
+      </div>
     </nav>
   );
 };
 
-export default MobileMenu;
+export default DeskMenu;

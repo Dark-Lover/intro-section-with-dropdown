@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import open from "../../assets/icon-menu.svg";
 import close from "../../assets/icon-close-menu.svg";
 import MobileMenu from "../mobileMenu/MobileMenu";
+import DeskMenu from "../desktopMenu/DeskMenu";
 const Header = ({
   menuToggle,
   setMenuToggle,
@@ -22,16 +23,13 @@ const Header = ({
       </div>
 
       {menuToggle && (
-        <div className={styles.mobile_menu_container}>
-          <div className={styles.mobile_menu_wrapper}>
-            <MobileMenu />
-          </div>
-        </div>
-      )}
-      <div className={styles.desktop_menu}>
         <div className={styles.mobile_menu_wrapper}>
           <MobileMenu />
         </div>
+      )}
+
+      <div className={styles.desk_menu_wrapper}>
+        <DeskMenu />
       </div>
     </header>
   );
