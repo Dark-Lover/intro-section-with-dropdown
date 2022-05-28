@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/intro-section-with-dropdown/static/css/main.222f1489.css",
+    "main.css": "/intro-section-with-dropdown/static/css/main.f3dce4bf.css",
     "main.js": "/intro-section-with-dropdown/static/js/main.9eb473b1.js",
     "static/js/787.a03a62c8.chunk.js": "/intro-section-with-dropdown/static/js/787.a03a62c8.chunk.js",
     "static/media/image-hero-mobile.png": "/intro-section-with-dropdown/static/media/image-hero-mobile.adefc8b1bbed2ca80470.png",
@@ -17,12 +17,12 @@
     "static/media/icon-menu.svg": "/intro-section-with-dropdown/static/media/icon-menu.863803c904916606b7a1998b3c5736aa.svg",
     "static/media/icon-arrow-down.svg": "/intro-section-with-dropdown/static/media/icon-arrow-down.bebf05132571af33611ede9cdfdbed0f.svg",
     "static/media/icon-arrow-up.svg": "/intro-section-with-dropdown/static/media/icon-arrow-up.01861a1152dfab5f1070228d306352f4.svg",
-    "main.222f1489.css.map": "/intro-section-with-dropdown/static/css/main.222f1489.css.map",
+    "main.f3dce4bf.css.map": "/intro-section-with-dropdown/static/css/main.f3dce4bf.css.map",
     "main.9eb473b1.js.map": "/intro-section-with-dropdown/static/js/main.9eb473b1.js.map",
     "787.a03a62c8.chunk.js.map": "/intro-section-with-dropdown/static/js/787.a03a62c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.222f1489.css",
+    "static/css/main.f3dce4bf.css",
     "static/js/main.9eb473b1.js"
   ]
 }
