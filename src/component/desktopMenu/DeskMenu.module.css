@@ -15,10 +15,14 @@
   width: 90px;
   display: flex;
   cursor: pointer;
-
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.desk_menu ul li a:hover {
+  color: black;
+  font-weight: 600;
 }
 
 .desk_menu ul li:first-child,
@@ -58,6 +62,12 @@
 .desk_menu .auth .register {
   border: 2px solid hsl(0, 0%, 55%);
   outline: none;
+}
+
+.desk_menu .auth .login:hover,
+.desk_menu .auth .register:hover {
+  color: black;
+  font-weight: 600;
 }
 
 /* Dropdown Styling */
